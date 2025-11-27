@@ -52,7 +52,7 @@ def add_grades(name: str, students: list) -> None:
             tmp_grades = input('Enter a grade (or \'done\' to finish): ').lower().strip()
             if tmp_grades == 'done':
                 break
-            elif tmp_grades.isdigit() and 0 < int(tmp_grades) <= 100:
+            elif tmp_grades.isdigit() and 0 <= int(tmp_grades) <= 100:
                 students[who_is_student(name, students)][name].append(int(tmp_grades))
             else:
                 print('Invalid input. Please enter a correct number.')
